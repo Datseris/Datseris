@@ -1,16 +1,29 @@
-### Hi there 👋
+```julia
+Base.@kwdef struct Datseris
+    job::String = "physicist"
+    years::Int = 29
+    website::String = "https://datseris.github.io/"
+    current_projects
+end
 
-<!--
-**Datseris/Datseris** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Base.summary(d::Datseris) = "Some $(d.years) year old $(d.job)"
+workson(d::Datseris) = d.current_projects 
+hobbies(::Datseris) = ("drums", "painting", "cooking", "programming")
+favorite_project(::Datseris) = "DynamicalBilliards.jl"
 
-Here are some ideas to get you started:
+# Begin my description
+me = Datseris(current_projects = [
+  "Albedo Symmetry", 
+  "Musician Synchronization",
+  "Agents.jl",
+  "DynamicalSystems.jl",
+  "DrWatson.jl"
+])
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+println(summary(me))
+println("works on: $(join(me.current_projects, ", "))")
+println("has hobbies: $(join(hobbies(me), ", "))")
+```
+
+![Datseris's github stats](https://github-readme-stats.vercel.app/api?username=Datseris&show_icons=true&hide=["issues"])
+
