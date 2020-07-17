@@ -3,7 +3,7 @@ Base.@kwdef struct Datseris
     job::String = "physicist"
     years::Int = 29
     website::String = "https://datseris.github.io/"
-    current_projects
+    current_projects::Vector{String}
 end
 
 Base.summary(d::Datseris) = "Some $(d.years) year old $(d.job)"
