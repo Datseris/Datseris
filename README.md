@@ -8,7 +8,7 @@ end
 
 Base.summary(d::Datseris) = "Some $(d.years) year old $(d.job)"
 workson(d::Datseris) = d.current_projects 
-hobbies(::Datseris) = ("drums", "painting", "cooking", "programming")
+hobbies(::Datseris) = ("drums", "bouldering", "painting", "cooking", "programming")
 favorite_project(::Datseris) = "DynamicalBilliards.jl"
 
 # Begin my description
