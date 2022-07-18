@@ -1,12 +1,15 @@
 ```julia
+using Dates
+
 Base.@kwdef struct Datseris
     job::String = "physicist"
-    years::Int = 29
+    bdate::Int = 1991
     website::String = "https://datseris.github.io/"
     current_projects::Vector{String}
 end
 
-Base.summary(d::Datseris) = "Some $(d.years) year old $(d.job)"
+age(d) = Dates.year(now()) - d.bdate
+Base.summary(d::Datseris) = "Some $(age(d)) year old $(d.job)"
 workson(d::Datseris) = d.current_projects 
 hobbies(::Datseris) = ("drums", "bouldering", "painting", "cooking", "programming")
 favorite_project(::Datseris) = "DynamicalBilliards.jl"
