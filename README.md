@@ -16,9 +16,9 @@ favorite_project(::Datseris) = "DynamicalBilliards.jl"
 
 # Begin my description
 me = Datseris(current_projects = [
-  "Albedo Symmetry", 
-  "Musician Synchronization",
-  "Agents.jl",
+  "Stratocumulus-cumulus Transitions",
+  "Global continuation",
+  "Nonlinear response of dynamical systems",
   "DynamicalSystems.jl",
   "DrWatson.jl"
 ])
